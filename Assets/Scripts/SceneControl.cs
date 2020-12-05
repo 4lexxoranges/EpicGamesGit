@@ -12,10 +12,12 @@ public class SceneControl : MonoBehaviour
     {
         
     }
+
     public void SceneManager(string sceneName)
     {
         Application.LoadLevel(sceneName);
     }
+
     public void Exit()
     {
         Application.Quit();

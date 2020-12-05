@@ -195,7 +195,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 1.14604e-40, z: 0, w: 6.0754246e-10}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -327,7 +327,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -784, y: -208.59998}
+  m_AnchoredPosition: {x: -784, y: -348.59998}
   m_SizeDelta: {x: 310.92896, y: 62.574738}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &418626268
@@ -620,7 +620,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -784, y: -129.4}
+  m_AnchoredPosition: {x: -784, y: -269.4}
   m_SizeDelta: {x: 310.92896, y: 62.574738}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1103857102
@@ -665,7 +665,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1103857103}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 534669906}
+        m_MethodName: SceneManager
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Shop
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1103857103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -841,7 +852,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -784, y: -49}
+  m_AnchoredPosition: {x: -784, y: -189}
   m_SizeDelta: {x: 310.92896, y: 62.574738}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1182717330
@@ -971,7 +982,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -784, y: -290.1}
+  m_AnchoredPosition: {x: -784, y: -430.1}
   m_SizeDelta: {x: 310.92896, y: 62.574738}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1456419847
