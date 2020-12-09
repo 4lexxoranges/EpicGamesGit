@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ShopControl : MonoBehaviour
 {
@@ -35,13 +33,220 @@ public class ShopControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        PlayerPrefs.GetInt("NumberPlayer");
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (NumberEquip == 1)
+        {
+            equip.SetActive(false);
+            equip2.SetActive(false);
+            equip3.SetActive(false);
+            equip4.SetActive(false);
+            equip5.SetActive(false);
+            equip6.SetActive(false);
+            equip7.SetActive(false);
+            equip8.SetActive(false);
+            equip9.SetActive(false);
+            equip10.SetActive(false);
+            equip11.SetActive(false);
+            equip12.SetActive(false);
+            equip13.SetActive(false);
+        }
+        if (NumberEquip == 2)
+        {
+            equip.SetActive(false);
+            equip2.SetActive(false);
+            equip3.SetActive(false);
+            equip4.SetActive(false);
+            equip5.SetActive(false);
+            equip6.SetActive(false);
+            equip7.SetActive(false);
+            equip8.SetActive(false);
+            equip9.SetActive(false);
+            equip10.SetActive(false);
+            equip11.SetActive(false);
+            equip12.SetActive(false);
+            equip13.SetActive(false);
+        }
+        if (NumberEquip == 3)
+        {
+            equip.SetActive(false);
+            equip2.SetActive(false);
+            equip3.SetActive(false);
+            equip4.SetActive(false);
+            equip5.SetActive(false);
+            equip6.SetActive(false);
+            equip7.SetActive(false);
+            equip8.SetActive(false);
+            equip9.SetActive(false);
+            equip10.SetActive(false);
+            equip11.SetActive(false);
+            equip12.SetActive(false);
+            equip13.SetActive(false);
+        }
+        if (NumberEquip == 4)
+        {
+            equip.SetActive(false);
+            equip2.SetActive(false);
+            equip3.SetActive(false);
+            equip4.SetActive(false);
+            equip5.SetActive(false);
+            equip6.SetActive(false);
+            equip7.SetActive(false);
+            equip8.SetActive(false);
+            equip9.SetActive(false);
+            equip10.SetActive(false);
+            equip11.SetActive(false);
+            equip12.SetActive(false);
+            equip13.SetActive(false);
+        }
+        if (NumberEquip == 5)
+        {
+            equip.SetActive(false);
+            equip2.SetActive(false);
+            equip3.SetActive(false);
+            equip4.SetActive(false);
+            equip5.SetActive(false);
+            equip6.SetActive(false);
+            equip7.SetActive(false);
+            equip8.SetActive(false);
+            equip9.SetActive(false);
+            equip10.SetActive(false);
+            equip11.SetActive(false);
+            equip12.SetActive(false);
+            equip13.SetActive(false);
+        }
+        if (NumberEquip == 6)
+        {
+            equip.SetActive(false);
+            equip2.SetActive(false);
+            equip3.SetActive(false);
+            equip4.SetActive(false);
+            equip5.SetActive(false);
+            equip6.SetActive(false);
+            equip7.SetActive(false);
+            equip8.SetActive(false);
+            equip9.SetActive(false);
+            equip10.SetActive(false);
+            equip11.SetActive(false);
+            equip12.SetActive(false);
+            equip13.SetActive(false);
+        }
+        if (NumberEquip == 7)
+        {
+            equip.SetActive(false);
+            equip2.SetActive(false);
+            equip3.SetActive(false);
+            equip4.SetActive(false);
+            equip5.SetActive(false);
+            equip6.SetActive(false);
+            equip7.SetActive(false);
+            equip8.SetActive(false);
+            equip9.SetActive(false);
+            equip10.SetActive(false);
+            equip11.SetActive(false);
+            equip12.SetActive(false);
+            equip13.SetActive(false);
+        }
+        if (NumberEquip == 8)
+        {
+            equip.SetActive(false);
+            equip2.SetActive(false);
+            equip3.SetActive(false);
+            equip4.SetActive(false);
+            equip5.SetActive(false);
+            equip6.SetActive(false);
+            equip7.SetActive(false);
+            equip8.SetActive(false);
+            equip9.SetActive(false);
+            equip10.SetActive(false);
+            equip11.SetActive(false);
+            equip12.SetActive(false);
+            equip13.SetActive(false);
+        }
+        if (NumberEquip == 9)
+        {
+            equip.SetActive(false);
+            equip2.SetActive(false);
+            equip3.SetActive(false);
+            equip4.SetActive(false);
+            equip5.SetActive(false);
+            equip6.SetActive(false);
+            equip7.SetActive(false);
+            equip8.SetActive(false);
+            equip9.SetActive(false);
+            equip10.SetActive(false);
+            equip11.SetActive(false);
+            equip12.SetActive(false);
+            equip13.SetActive(false);
+        }
+        if (NumberEquip == 10)
+        {
+            equip.SetActive(false);
+            equip2.SetActive(false);
+            equip3.SetActive(false);
+            equip4.SetActive(false);
+            equip5.SetActive(false);
+            equip6.SetActive(false);
+            equip7.SetActive(false);
+            equip8.SetActive(false);
+            equip9.SetActive(false);
+            equip10.SetActive(false);
+            equip11.SetActive(false);
+            equip12.SetActive(false);
+            equip13.SetActive(false);
+        }
+        if (NumberEquip == 11)
+        {
+            equip.SetActive(false);
+            equip2.SetActive(false);
+            equip3.SetActive(false);
+            equip4.SetActive(false);
+            equip5.SetActive(false);
+            equip6.SetActive(false);
+            equip7.SetActive(false);
+            equip8.SetActive(false);
+            equip9.SetActive(false);
+            equip10.SetActive(false);
+            equip11.SetActive(false);
+            equip12.SetActive(false);
+            equip13.SetActive(false);
+        }
+        if (NumberEquip == 12)
+        {
+            equip.SetActive(false);
+            equip2.SetActive(false);
+            equip3.SetActive(false);
+            equip4.SetActive(false);
+            equip5.SetActive(false);
+            equip6.SetActive(false);
+            equip7.SetActive(false);
+            equip8.SetActive(false);
+            equip9.SetActive(false);
+            equip10.SetActive(false);
+            equip11.SetActive(false);
+            equip12.SetActive(false);
+            equip13.SetActive(false);
+        }
+        if (NumberEquip == 13)
+        {
+            equip.SetActive(false);
+            equip2.SetActive(false);
+            equip3.SetActive(false);
+            equip4.SetActive(false);
+            equip5.SetActive(false);
+            equip6.SetActive(false);
+            equip7.SetActive(false);
+            equip8.SetActive(false);
+            equip9.SetActive(false);
+            equip10.SetActive(false);
+            equip11.SetActive(false);
+            equip12.SetActive(false);
+            equip13.SetActive(false);
+        }
     }
     public void PlayerWhite()
     {
@@ -58,6 +263,7 @@ public class ShopControl : MonoBehaviour
         equip11.SetActive(false);
         equip12.SetActive(false);
         equip13.SetActive(false);
+
         playerWhite.SetActive(true);
         playerBlack.SetActive(false);
         playerBlue.SetActive(false);
@@ -88,6 +294,7 @@ public class ShopControl : MonoBehaviour
         equip11.SetActive(false);
         equip12.SetActive(false);
         equip13.SetActive(false);
+
         playerWhite.SetActive(false);
         playerBlack.SetActive(true);
         playerBlue.SetActive(false);
@@ -117,6 +324,7 @@ public class ShopControl : MonoBehaviour
         equip11.SetActive(false);
         equip12.SetActive(false);
         equip13.SetActive(false);
+
         playerWhite.SetActive(false);
         playerBlack.SetActive(false);
         playerBlue.SetActive(true);
@@ -146,6 +354,7 @@ public class ShopControl : MonoBehaviour
         equip11.SetActive(false);
         equip12.SetActive(false);
         equip13.SetActive(false);
+
         playerWhite.SetActive(false);
         playerBlack.SetActive(false);
         playerBlue.SetActive(false);
@@ -175,6 +384,7 @@ public class ShopControl : MonoBehaviour
         equip11.SetActive(false);
         equip12.SetActive(false);
         equip13.SetActive(false);
+
         playerWhite.SetActive(false);
         playerBlack.SetActive(false);
         playerBlue.SetActive(false);
@@ -204,6 +414,7 @@ public class ShopControl : MonoBehaviour
         equip11.SetActive(false);
         equip12.SetActive(false);
         equip13.SetActive(false);
+
         playerWhite.SetActive(false);
         playerBlack.SetActive(false);
         playerBlue.SetActive(false);
@@ -233,6 +444,7 @@ public class ShopControl : MonoBehaviour
         equip11.SetActive(false);
         equip12.SetActive(false);
         equip13.SetActive(false);
+
         playerWhite.SetActive(false);
         playerBlack.SetActive(false);
         playerBlue.SetActive(false);
@@ -262,6 +474,7 @@ public class ShopControl : MonoBehaviour
         equip11.SetActive(false);
         equip12.SetActive(false);
         equip13.SetActive(false);
+
         playerWhite.SetActive(false);
         playerBlack.SetActive(false);
         playerBlue.SetActive(false);
@@ -291,6 +504,7 @@ public class ShopControl : MonoBehaviour
         equip11.SetActive(false);
         equip12.SetActive(false);
         equip13.SetActive(false);
+
         playerWhite.SetActive(false);
         playerBlack.SetActive(false);
         playerBlue.SetActive(false);
@@ -320,6 +534,7 @@ public class ShopControl : MonoBehaviour
         equip11.SetActive(false);
         equip12.SetActive(false);
         equip13.SetActive(false);
+
         playerWhite.SetActive(false);
         playerBlack.SetActive(false);
         playerBlue.SetActive(false);
@@ -349,6 +564,7 @@ public class ShopControl : MonoBehaviour
         equip11.SetActive(true);
         equip12.SetActive(false);
         equip13.SetActive(false);
+
         playerWhite.SetActive(false);
         playerBlack.SetActive(false);
         playerBlue.SetActive(false);
@@ -378,6 +594,7 @@ public class ShopControl : MonoBehaviour
         equip11.SetActive(false);
         equip12.SetActive(true);
         equip13.SetActive(false);
+
         playerWhite.SetActive(false);
         playerBlack.SetActive(false);
         playerBlue.SetActive(false);
@@ -407,6 +624,7 @@ public class ShopControl : MonoBehaviour
         equip11.SetActive(false);
         equip12.SetActive(false);
         equip13.SetActive(true);
+
         playerWhite.SetActive(false);
         playerBlack.SetActive(false);
         playerBlue.SetActive(false);
@@ -420,5 +638,70 @@ public class ShopControl : MonoBehaviour
         playerBrown.SetActive(false);
         playerLightGreen.SetActive(false);
         playerBirch.SetActive(true);
+    }
+    public void Equip1()
+    {
+        NumberEquip = 1;
+        PlayerPrefs.SetInt("NumberPlayer", NumberEquip);
+    }
+    public void Equip2()
+    {
+        NumberEquip = 2;
+        PlayerPrefs.SetInt("NumberPlayer", NumberEquip);
+    }
+    public void Equip3()
+    {
+        NumberEquip = 3;
+        PlayerPrefs.SetInt("NumberPlayer", NumberEquip);
+    }
+    public void Equip4()
+    {
+        NumberEquip = 4;
+        PlayerPrefs.SetInt("NumberPlayer", NumberEquip);
+    }
+    public void Equip5()
+    {
+        NumberEquip = 5;
+        PlayerPrefs.SetInt("NumberPlayer", NumberEquip);
+    }
+    public void Equip6()
+    {
+        NumberEquip = 6;
+        PlayerPrefs.SetInt("NumberPlayer", NumberEquip);
+    }
+    public void Equip7()
+    {
+        NumberEquip = 7;
+        PlayerPrefs.SetInt("NumberPlayer", NumberEquip);
+    }
+    public void Equip8()
+    {
+        NumberEquip = 8;
+        PlayerPrefs.SetInt("NumberPlayer", NumberEquip);
+    }
+    public void Equip9()
+    {
+        NumberEquip = 9;
+        PlayerPrefs.SetInt("NumberPlayer", NumberEquip);
+    }
+    public void Equip10()
+    {
+        NumberEquip = 10;
+        PlayerPrefs.SetInt("NumberPlayer", NumberEquip);
+    }
+    public void Equip11()
+    {
+        NumberEquip = 11;
+        PlayerPrefs.SetInt("NumberPlayer", NumberEquip);
+    }
+    public void Equip12()
+    {
+        NumberEquip = 12;
+        PlayerPrefs.SetInt("NumberPlayer", NumberEquip);
+    }
+    public void Equip13()
+    {
+        NumberEquip = 13;
+        PlayerPrefs.SetInt("NumberPlayer", NumberEquip);
     }
 }
