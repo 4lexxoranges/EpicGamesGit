@@ -1,14 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
     public float speedMove = 10;
     public float jumpPower = 8;
+    public Button buttonJump;
 
     private float gravityForce;
     private Vector3 moveVector;
+
+    Rigidbody player;
 
     private CharacterController characterController;
     private MobileController mobileController;
@@ -23,11 +25,15 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         CharacterMove();
-        GamingGravity();
-        //Cursor.visible = false;
+        //GamingGravity();
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+
     }
     void CharacterMove()
     {
+
         moveVector = Vector3.zero;
         moveVector.x = mobileController.Horizontal() * speedMove;
         moveVector.z = mobileController.Vertical() * speedMove;
@@ -37,23 +43,23 @@ public class PlayerController : MonoBehaviour
             Vector3 direct = Vector3.RotateTowards(transform.forward, moveVector, speedMove, 0.0f);
             transform.rotation = Quaternion.LookRotation(direct);
         }
-
-        moveVector.y = gravityForce;
+        //moveVector.y = gravityForce;
         characterController.Move(moveVector * Time.deltaTime);
     }
-    void GamingGravity()
-    {
-        if (!characterController.isGrounded)
-        {
-            gravityForce -= 20f * Time.deltaTime;
-        }
-        else
-        {
-            gravityForce = -1f;
-        }
-        if (Input.GetKeyDown(KeyCode.Space) && characterController.isGrounded)
-        {
-            gravityForce = jumpPower;
-        }
-    }
+
+    //public void GamingGravity()
+    //{
+    //    if (!characterController.isGrounded)
+    //    {
+    //        gravityForce -= 20f * Time.deltaTime;
+    //    }
+    //    else
+    //    {
+    //        gravityForce = -1f;
+    //    }
+    //    if (characterController.isGrounded)
+    //    {
+    //        gravityForce = jumpPower;
+    //    }
+    //}
 }
