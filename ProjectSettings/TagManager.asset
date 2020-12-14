@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Ground
   - Joystick
+  - Enemy
+  - isFriendly
+  - Person
+  - DeathGround
   layers:
   - Default
   - TransparentFX

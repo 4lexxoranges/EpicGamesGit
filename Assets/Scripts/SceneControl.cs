@@ -5,6 +5,11 @@ using UnityEngine;
 public class SceneControl : MonoBehaviour
 {
     public GameObject pausePanel;
+    public GameObject image;
+    public GameObject image2;
+    public GameObject mainMenu;
+    public GameObject menu;
+    public GameObject menu2;
 
     // Start is called before the first frame update
     void Start()
@@ -22,32 +27,38 @@ public class SceneControl : MonoBehaviour
         Application.LoadLevel(name);
     }
 
-    public void Pause()
+    public void MenuOn()
     {
-        pausePanel.SetActive(true);
-        Time.timeScale = 0;
+        mainMenu.SetActive(true);
+    }
+    public void MenuOff()
+    {
+        mainMenu.SetActive(false);
     }
 
-    public void Continue()
+    public void Players()
     {
-        Time.timeScale = 1;
-        pausePanel.SetActive(false);
+        image2.SetActive(false);
+        image.SetActive(true);
+        menu.SetActive(true);
+        menu2.SetActive(false);
+    }
+
+    public void Settings()
+    {
+        image.SetActive(false);
+        image2.SetActive(true);
+        menu.SetActive(false);
+        menu2.SetActive(true);
     }
 
     public void Restart()
     {
-        Time.timeScale = 1;
         Application.LoadLevel("Game");
     }
-
-    public void Menu()
+    public void Equit()
     {
-        Application.LoadLevel("MainMenu");
-    }
 
-    public void Quit()
-    {
-        Application.Quit();
     }
 }
 

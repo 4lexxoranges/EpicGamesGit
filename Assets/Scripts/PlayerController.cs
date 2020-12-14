@@ -5,18 +5,23 @@ public class PlayerController : MonoBehaviour
 {
     public float speedMove = 10;
     public float jumpPower = 8;
-    public Button buttonJump;
-
+    public float healthSize = 100;
     private float gravityForce;
     private Vector3 moveVector;
-
-    Rigidbody player;
+    public GameObject healthBar;
+    public GameObject deathMenu;
 
     private CharacterController characterController;
     private MobileController mobileController;
+    public float currentHealth;
+
+    enum State { Playing, Dead }
+
+    State state = State.Playing;
     // Start is called before the first frame update
     void Start()
     {
+        currentHealth = healthSize;
         characterController = GetComponent<CharacterController>();
         mobileController = GameObject.FindGameObjectWithTag("Joystick").GetComponent<MobileController>();
     }
@@ -24,42 +29,80 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CharacterMove();
-        //GamingGravity();
-    }
-    private void OnCollisionEnter(Collision collision)
-    {
+        if (state == State.Playing)
+        {
+            CharacterMove();
+            GamingGravity();
+            healthBar.transform.localScale = new Vector2(currentHealth / healthSize, 1);
 
+            if (currentHealth <= 0)
+            {
+                Lose();
+            }
+        }
     }
+
     void CharacterMove()
     {
-
-        moveVector = Vector3.zero;
-        moveVector.x = mobileController.Horizontal() * speedMove;
-        moveVector.z = mobileController.Vertical() * speedMove;
-
-        if (Vector3.Angle(Vector3.forward, moveVector) > 1f || Vector3.Angle(Vector3.forward, moveVector) == 0)
+        if (state == State.Playing)
         {
-            Vector3 direct = Vector3.RotateTowards(transform.forward, moveVector, speedMove, 0.0f);
-            transform.rotation = Quaternion.LookRotation(direct);
+            moveVector = Vector3.zero;
+            moveVector.x = mobileController.Horizontal() * speedMove;
+            moveVector.z = mobileController.Vertical() * speedMove;
+
+            if (Vector3.Angle(Vector3.forward, moveVector) > 1f || Vector3.Angle(Vector3.forward, moveVector) == 0)
+            {
+                Vector3 direct = Vector3.RotateTowards(transform.forward, moveVector, speedMove, 0.0f);
+                transform.rotation = Quaternion.LookRotation(direct);
+            }
+            moveVector.y = gravityForce;
+            characterController.Move(moveVector * Time.deltaTime);
         }
-        //moveVector.y = gravityForce;
-        characterController.Move(moveVector * Time.deltaTime);
     }
 
-    //public void GamingGravity()
-    //{
-    //    if (!characterController.isGrounded)
-    //    {
-    //        gravityForce -= 20f * Time.deltaTime;
-    //    }
-    //    else
-    //    {
-    //        gravityForce = -1f;
-    //    }
-    //    if (characterController.isGrounded)
-    //    {
-    //        gravityForce = jumpPower;
-    //    }
-    //}
+    public void GamingGravity()
+    {
+        if (state == State.Playing)
+        {
+            if (!characterController.isGrounded)
+            {
+                gravityForce -= 20f * Time.deltaTime;
+            }
+            else
+            {
+                gravityForce = -1f;
+            }
+            if (Input.GetKeyDown(KeyCode.Space) && characterController.isGrounded)
+            {
+                gravityForce = jumpPower;
+            }
+        }
+    }
+    void Lose()
+    {
+        state = State.Dead;
+        Time.timeScale = 0;
+        deathMenu.SetActive(true);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        switch (other.gameObject.tag)
+        {
+            case "DeathGround":
+                currentHealth -= 100;
+                break;
+            case "Enemy":
+                currentHealth -= 20;
+                break;
+        }
+    }
+    void OnCollisionEnter(Collision collision)
+    {
+        switch (collision.gameObject.tag)
+        {
+            //case "Enemy":
+            //    break;
+        }
+    }
 }

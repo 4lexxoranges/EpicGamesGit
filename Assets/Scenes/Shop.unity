@@ -1217,8 +1217,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 627943345}
-        m_MethodName: Equip2
+      - m_Target: {fileID: 1856958840}
+        m_MethodName: EquipBlack
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1607,8 +1607,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 627943345}
-        m_MethodName: Equip1
+      - m_Target: {fileID: 1856958840}
+        m_MethodName: EquipWhite
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1737,8 +1737,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 627943345}
-        m_MethodName: Equip8
+      - m_Target: {fileID: 1856958840}
+        m_MethodName: EquipYellow
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1785,76 +1785,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 616741464}
   m_CullTransparentMesh: 0
---- !u!1 &627943344
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 627943346}
-  - component: {fileID: 627943345}
-  m_Layer: 0
-  m_Name: PlayerManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &627943345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 627943344}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de23a339708d63e41bae3af6ca6d614a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerWhite: {fileID: 1856958839}
-  playerBlack: {fileID: 0}
-  playerBlue: {fileID: 0}
-  playerGray: {fileID: 0}
-  playerGreen: {fileID: 0}
-  playerOrange: {fileID: 0}
-  playerPink: {fileID: 0}
-  playerPurple: {fileID: 0}
-  playerRed: {fileID: 0}
-  playerYellow: {fileID: 0}
-  playerBrown: {fileID: 0}
-  playerLightGreen: {fileID: 0}
-  playerBirch: {fileID: 0}
-  equip: {fileID: 582235670}
-  equip2: {fileID: 437506101}
-  equip3: {fileID: 984479465}
-  equip4: {fileID: 1932676126}
-  equip5: {fileID: 2030047270}
-  equip6: {fileID: 732510404}
-  equip7: {fileID: 2096529183}
-  equip8: {fileID: 616741464}
-  equip9: {fileID: 1684791810}
-  equip10: {fileID: 1982086005}
-  equip11: {fileID: 1286941403}
-  equip12: {fileID: 1999266723}
-  equip13: {fileID: 1885369319}
-  NumberEquip: 0
---- !u!4 &627943346
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 627943344}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &629058229
 GameObject:
   m_ObjectHideFlags: 0
@@ -2067,8 +1997,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 627943345}
-        m_MethodName: Equip6
+      - m_Target: {fileID: 1856958840}
+        m_MethodName: EquipOrange
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3227,8 +3157,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 627943345}
-        m_MethodName: Equip3
+      - m_Target: {fileID: 1856958840}
+        m_MethodName: EquipBlue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3825,8 +3755,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 627943345}
-        m_MethodName: Equip11
+      - m_Target: {fileID: 1856958840}
+        m_MethodName: EquipRed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4659,8 +4589,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 627943345}
-        m_MethodName: Equip9
+      - m_Target: {fileID: 1856958840}
+        m_MethodName: EquipPurple
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5121,6 +5051,19 @@ MonoBehaviour:
   redTexture: {fileID: 2800000, guid: 8ac3d09e9e8dabf429f8cdaaf9fd341d, type: 3}
   lightGreenTexture: {fileID: 2800000, guid: 5cee4c5302ff49f48b7b9e75d063ff56, type: 3}
   birchTexture: {fileID: 2800000, guid: d5c63230058cac34ebabdf35c6f8e43e, type: 3}
+  whiteEquip: {fileID: 582235670}
+  blackEquip: {fileID: 437506101}
+  blueEquip: {fileID: 984479465}
+  grayEquip: {fileID: 1932676126}
+  greenEquip: {fileID: 2030047270}
+  orangeEquip: {fileID: 732510404}
+  pinkEquip: {fileID: 2096529183}
+  yellowEquip: {fileID: 616741464}
+  purpleEquip: {fileID: 1684791810}
+  brownEquip: {fileID: 1982086005}
+  redEquip: {fileID: 1286941403}
+  lightGreenEquip: {fileID: 1999266723}
+  birchEquip: {fileID: 1885369319}
 --- !u!136 &1856958844
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5217,8 +5160,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 627943345}
-        m_MethodName: Equip13
+      - m_Target: {fileID: 1856958840}
+        m_MethodName: EquipBirch
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5347,8 +5290,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 627943345}
-        m_MethodName: Equip4
+      - m_Target: {fileID: 1856958840}
+        m_MethodName: EquipGray
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5477,8 +5420,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 627943345}
-        m_MethodName: Equip10
+      - m_Target: {fileID: 1856958840}
+        m_MethodName: EquipBrown
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5685,8 +5628,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 627943345}
-        m_MethodName: Equip12
+      - m_Target: {fileID: 1856958840}
+        m_MethodName: EquipLightGreen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5815,8 +5758,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 627943345}
-        m_MethodName: Equip5
+      - m_Target: {fileID: 1856958840}
+        m_MethodName: EquipGreen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6101,8 +6044,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 627943345}
-        m_MethodName: Equip7
+      - m_Target: {fileID: 1856958840}
+        m_MethodName: EquipPink
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
