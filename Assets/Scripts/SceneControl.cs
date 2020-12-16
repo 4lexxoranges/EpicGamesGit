@@ -58,7 +58,7 @@ public class SceneControl : MonoBehaviour
     }
     public void Equit()
     {
-
+        Application.Quit();
     }
 }
 

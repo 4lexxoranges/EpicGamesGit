@@ -695,6 +695,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pausePanel: {fileID: 0}
+  image: {fileID: 0}
+  image2: {fileID: 0}
+  mainMenu: {fileID: 0}
+  menu: {fileID: 0}
+  menu2: {fileID: 0}
 --- !u!114 &534669907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1309,7 +1314,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 534669906}
-        m_MethodName: Quit
+        m_MethodName: Equit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
