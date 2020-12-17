@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] public GameObject coin;
     [SerializeField] public Text coins;
     [SerializeField] public int coinsCount;
-
+    
     private CharacterController characterController;
     private MobileController mobileController;
     public float currentHealth;
@@ -43,6 +43,7 @@ public class PlayerController : MonoBehaviour
     {
         if (state == State.Playing)
         {
+            
             CharacterMove();
             GamingGravity();
             //Rotate();
@@ -102,11 +103,8 @@ public class PlayerController : MonoBehaviour
     {
         switch (other.gameObject.tag)
         {
-            case "DeathGround":
-                currentHealth -= 100;
-                break;
             case "Enemy":
-                currentHealth -= 20;
+                currentHealth -= 100;
                 break;
             case "Coin":
                 coinsCount += 100;

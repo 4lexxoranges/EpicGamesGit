@@ -4,17 +4,26 @@ using UnityEngine;
 
 public class CameraControl : MonoBehaviour
 {
-    public GameObject Player;
-    Vector3 offset;
+    private float yAxis;
+    private float xAxis;
+    public float rotationVelocity = 8f;
+
+    public Transform target;
 
     void Start()
     {
-        offset = transform.position - Player.transform.position;
+        
     }
 
     // Update is called once per frame
-    void LateUpdate()
+    void Update()
     {
-        transform.position = Player.transform.position + offset;
+        yAxis += Input.GetAxis("Mouse X") * rotationVelocity;
+        xAxis -= Input.GetAxis("Mouse Y") * rotationVelocity;
+
+        Vector3 targetRotation = new Vector3(xAxis, yAxis);
+        transform.eulerAngles = targetRotation;
+
+        transform.position = target.position - transform.forward * 6f;
     }
 }
