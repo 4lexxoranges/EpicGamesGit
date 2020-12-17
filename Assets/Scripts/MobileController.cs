@@ -58,4 +58,5 @@ public class MobileController : MonoBehaviour, IDragHandler, IPointerUpHandler, 
             return Input.GetAxis("Vertical");
         }
     }
+    
 }

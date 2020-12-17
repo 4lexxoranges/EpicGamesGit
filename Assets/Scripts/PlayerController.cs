@@ -85,7 +85,7 @@ public class PlayerController : MonoBehaviour
             {
                 gravityForce = -1f;
             }
-            if (Input.GetKeyDown(KeyCode.Space) && characterController.isGrounded)
+            if (Input.GetKey(KeyCode.Space) && characterController.isGrounded)
             {
                 gravityForce = jumpPower;
             }
@@ -112,6 +112,7 @@ public class PlayerController : MonoBehaviour
                 coinsCount += 100;
                 coins.text = "Coins:" + coinsCount.ToString();
                 Destroy(coin);
+
                 SavePlayer();
                 break;
         }
