@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     public float speedMove = 10;
     public float jumpPower = 8;
@@ -10,10 +11,12 @@ public class PlayerController : MonoBehaviour
     private Vector3 moveVector;
     public GameObject healthBar;
     public GameObject deathMenu;
+
     [SerializeField] public GameObject coin;
     [SerializeField] public Text coins;
     [SerializeField] public int coinsCount;
-    
+    public Button jump;
+    public bool jumpIsPressed;
     private CharacterController characterController;
     private MobileController mobileController;
     public float currentHealth;
@@ -43,17 +46,26 @@ public class PlayerController : MonoBehaviour
     {
         if (state == State.Playing)
         {
-            
             CharacterMove();
             GamingGravity();
-            //Rotate();
-            healthBar.transform.localScale = new Vector2(currentHealth / healthSize, 1);
+            //Jump();
 
             if (currentHealth <= 0)
             {
                 Lose();
             }
+
         }
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        jumpIsPressed = true;
+    }
+
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        jumpIsPressed = false;
     }
 
     void CharacterMove()
@@ -86,12 +98,15 @@ public class PlayerController : MonoBehaviour
             {
                 gravityForce = -1f;
             }
-            if (Input.GetKey(KeyCode.Space) && characterController.isGrounded)
-            {
-                gravityForce = jumpPower;
-            }
         }
     }
+
+    public void Jump(bool isPressed)
+    {
+        if (characterController.isGrounded)
+            gravityForce = jumpPower;
+    }
+
     void Lose()
     {
         state = State.Dead;
@@ -115,14 +130,12 @@ public class PlayerController : MonoBehaviour
                 break;
         }
     }
+
     void SavePlayer()
     {
         PlayerPrefs.SetInt("coinsFinal", coinsCount);
     }
-    //public void Rotate()
-    //{
-    //    coin.transform.Rotate(0, 90, 0);
-    //}
+
     //void OnCollisionEnter(Collision collision)
     //{
     //    switch (collision.gameObject.tag)

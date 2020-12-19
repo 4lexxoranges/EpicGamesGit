@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7102404872404650958}
   - component: {fileID: 4139760606627170414}
   m_Layer: 0
-  m_Name: PlayerWhite
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -129,6 +129,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedMove: 10
   jumpPower: 8
+  healthSize: 100
+  healthBar: {fileID: 0}
+  deathMenu: {fileID: 0}
+  coin: {fileID: 0}
+  coins: {fileID: 0}
+  coinsCount: 0
+  currentHealth: 0
+  jump: {fileID: 0}
 --- !u!1 &5796053947753859172
 GameObject:
   m_ObjectHideFlags: 0
