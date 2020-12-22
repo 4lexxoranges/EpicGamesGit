@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Shop.unity
     guid: cd62bb9250d4de543b312ad7b9b7e9f1
   - enabled: 1
-    path: Assets/Scenes/Game.unity
+    path: Assets/Scenes/Lobby.unity
+    guid: d709564c2d890304b94386015460ca90
+  - enabled: 1
+    path: Assets/Scenes/Floor is lava.unity
     guid: bacc46ad20ca4b54c8ace75eb1d0387c
   m_configObjects: {}

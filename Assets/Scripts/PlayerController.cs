@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.EventSystems;
 
-public class PlayerController : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
+public class PlayerController : MonoBehaviour
 {
     public float speedMove = 10;
     public float jumpPower = 8;
@@ -15,21 +14,21 @@ public class PlayerController : MonoBehaviour, IPointerDownHandler, IPointerUpHa
     [SerializeField] public GameObject coin;
     [SerializeField] public Text coins;
     [SerializeField] public int coinsCount;
-    public Button jump;
-    public bool jumpIsPressed;
+
     private CharacterController characterController;
     private MobileController mobileController;
+    private Animator animator;
     public float currentHealth;
 
-    enum State { Playing, Dead }
 
-    State state = State.Playing;
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = healthSize;
         characterController = GetComponent<CharacterController>();
         mobileController = GameObject.FindGameObjectWithTag("Joystick").GetComponent<MobileController>();
+        animator = GetComponent<Animator>();
+
         if (PlayerPrefs.HasKey("coinsFinal"))
         {
             coinsCount = PlayerPrefs.GetInt("coinsFinal");
@@ -44,77 +43,79 @@ public class PlayerController : MonoBehaviour, IPointerDownHandler, IPointerUpHa
     // Update is called once per frame
     void Update()
     {
-        if (state == State.Playing)
+        CharacterMove();
+        GamingGravity();
+        if (moveVector.x != 0 || moveVector.z != 0)
         {
-            CharacterMove();
-            GamingGravity();
-            //Jump();
-
-            if (currentHealth <= 0)
-            {
-                Lose();
-            }
-
+            animator.SetBool("Move", true);
         }
+        else
+        {
+            animator.SetBool("Move", false);
+        }
+
+        if (currentHealth <= 0)
+        {
+            Invoke("Lose", 0.5f);
+        }
+
+
     }
 
-    public void OnPointerDown(PointerEventData eventData)
-    {
-        jumpIsPressed = true;
-    }
-
-    public void OnPointerUp(PointerEventData eventData)
-    {
-        jumpIsPressed = false;
-    }
 
     void CharacterMove()
     {
-        if (state == State.Playing)
-        {
-            moveVector = Vector3.zero;
-            moveVector.x = mobileController.Horizontal() * speedMove;
-            moveVector.z = mobileController.Vertical() * speedMove;
+        animator.ResetTrigger("Jump");
+        animator.SetBool("Failing", false);
 
-            if (Vector3.Angle(Vector3.forward, moveVector) > 1f || Vector3.Angle(Vector3.forward, moveVector) == 0)
-            {
-                Vector3 direct = Vector3.RotateTowards(transform.forward, moveVector, speedMove, 0.0f);
-                transform.rotation = Quaternion.LookRotation(direct);
-            }
-            moveVector.y = gravityForce;
-            characterController.Move(moveVector * Time.deltaTime);
+        moveVector = Vector3.zero;
+        moveVector.x = mobileController.Horizontal() * speedMove;
+        moveVector.z = mobileController.Vertical() * speedMove;
+
+        if (Vector3.Angle(Vector3.forward, moveVector) > 1f || Vector3.Angle(Vector3.forward, moveVector) == 0)
+        {
+            Vector3 direct = Vector3.RotateTowards(transform.forward, moveVector, speedMove, 0.0f);
+            transform.rotation = Quaternion.LookRotation(direct);
         }
+
+        moveVector.y = gravityForce;
+        characterController.Move(moveVector * Time.deltaTime);
+
+
     }
 
     public void GamingGravity()
     {
-        if (state == State.Playing)
+        if (!characterController.isGrounded)
         {
-            if (!characterController.isGrounded)
-            {
-                gravityForce -= 20f * Time.deltaTime;
-            }
-            else
-            {
-                gravityForce = -1f;
-            }
+            gravityForce -= 20f * Time.deltaTime;
+        }
+        else
+        {
+            gravityForce = -1f;
+        }
+
+        if (gravityForce <= -3f)
+        {
+            animator.SetBool("Failing", true);
         }
     }
 
     public void Jump(bool isPressed)
     {
         if (characterController.isGrounded)
+        {
             gravityForce = jumpPower;
+            animator.SetTrigger("Jump");
+        }
     }
 
     void Lose()
     {
-        state = State.Dead;
-        Time.timeScale = 0;
-        deathMenu.SetActive(true);
+        Application.LoadLevel("Lobby");
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
         switch (other.gameObject.tag)
         {
@@ -128,9 +129,20 @@ public class PlayerController : MonoBehaviour, IPointerDownHandler, IPointerUpHa
 
                 SavePlayer();
                 break;
+            case "FloorIsLava":
+                Application.LoadLevel("Floor Is Lava");
+                break;
         }
     }
 
+    public void OnCollisionEnter(Collision collision)
+    {
+        switch (collision.gameObject.tag)
+        {
+
+        }
+
+    }
     void SavePlayer()
     {
         PlayerPrefs.SetInt("coinsFinal", coinsCount);

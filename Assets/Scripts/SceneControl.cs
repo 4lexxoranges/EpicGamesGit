@@ -54,7 +54,7 @@ public class SceneControl : MonoBehaviour
 
     public void Restart()
     {
-        Application.LoadLevel("Game");
+        Application.LoadLevel("Floor is lava");
     }
     public void Equit()
     {
