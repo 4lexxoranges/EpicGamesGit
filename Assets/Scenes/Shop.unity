@@ -203,7 +203,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1856958840}
+      - m_Target: {fileID: 1051650192}
         m_MethodName: PlayerLightGreen
         m_Mode: 1
         m_Arguments:
@@ -448,7 +448,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1856958840}
+      - m_Target: {fileID: 1051650192}
         m_MethodName: PlayerGreen
         m_Mode: 1
         m_Arguments:
@@ -853,7 +853,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1856958840}
+      - m_Target: {fileID: 1051650192}
         m_MethodName: PlayerPurple
         m_Mode: 1
         m_Arguments:
@@ -1057,6 +1057,140 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 296663239}
   m_CullTransparentMesh: 0
+--- !u!1 &333343276
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 333343281}
+  - component: {fileID: 333343280}
+  - component: {fileID: 333343279}
+  - component: {fileID: 333343278}
+  - component: {fileID: 333343277}
+  m_Layer: 0
+  m_Name: Capsule
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &333343277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333343276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 386184b8690db9045918a2e414941fb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberColors: 0
+  whiteTexture: {fileID: 2800000, guid: 48c50c6224666674cb2a44601baaffe9, type: 3}
+  blackTexture: {fileID: 2800000, guid: 2280e7c9d1452a44597d3c5c5358807a, type: 3}
+  blueTexture: {fileID: 2800000, guid: e00e5a28502036c47b50de0ea40cfa8f, type: 3}
+  grayTexture: {fileID: 2800000, guid: e109ab16407a47241891367687e77976, type: 3}
+  greenTexture: {fileID: 2800000, guid: a0edb7045bd9b9240aef76d28caa4bb6, type: 3}
+  orangeTexture: {fileID: 2800000, guid: b6a3332a80f416e47b309616b1678c60, type: 3}
+  pinkTexture: {fileID: 2800000, guid: a572603c4c6af75449357bbbdc8e5482, type: 3}
+  yellowTexture: {fileID: 2800000, guid: 957d1e9e26206764abc156013d7cc12f, type: 3}
+  purpleTexture: {fileID: 2800000, guid: c9b72d667b2e1f54398eb64f67788595, type: 3}
+  brownTexture: {fileID: 2800000, guid: ff4c0dbff4035394b8b03a55593988b9, type: 3}
+  redTexture: {fileID: 2800000, guid: ccb7535c164bbf44d9b506c570172698, type: 3}
+  lightGreenTexture: {fileID: 2800000, guid: 51de805a2dd929a499ac021209657111, type: 3}
+  birchTexture: {fileID: 2800000, guid: d5c63230058cac34ebabdf35c6f8e43e, type: 3}
+  equipWhite: {fileID: 0}
+  equipBlack: {fileID: 0}
+  equipBlue: {fileID: 0}
+  equipGray: {fileID: 0}
+  equipGreen: {fileID: 0}
+  equipOrange: {fileID: 0}
+  equipPink: {fileID: 0}
+  equipYellow: {fileID: 0}
+  equipPurple: {fileID: 0}
+  equipBrown: {fileID: 0}
+  equipRed: {fileID: 0}
+  equipLightGreen: {fileID: 0}
+  equipBirch: {fileID: 0}
+--- !u!136 &333343278
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333343276}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &333343279
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333343276}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &333343280
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333343276}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &333343281
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333343276}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -51.6, y: -17.8, z: 84.873375}
+  m_LocalScale: {x: 14.997144, y: 14.997144, z: 14.997144}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &420894636
 GameObject:
   m_ObjectHideFlags: 0
@@ -1217,7 +1351,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1856958840}
+      - m_Target: {fileID: 1051650192}
         m_MethodName: EquipBlack
         m_Mode: 1
         m_Arguments:
@@ -1384,7 +1518,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1856958840}
+      - m_Target: {fileID: 1051650192}
         m_MethodName: PlayerBlue
         m_Mode: 1
         m_Arguments:
@@ -1514,7 +1648,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1856958840}
+      - m_Target: {fileID: 1051650192}
         m_MethodName: PlayerWhite
         m_Mode: 1
         m_Arguments:
@@ -1607,7 +1741,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1856958840}
+      - m_Target: {fileID: 1051650192}
         m_MethodName: EquipWhite
         m_Mode: 1
         m_Arguments:
@@ -1737,7 +1871,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1856958840}
+      - m_Target: {fileID: 1051650192}
         m_MethodName: EquipYellow
         m_Mode: 1
         m_Arguments:
@@ -1997,7 +2131,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1856958840}
+      - m_Target: {fileID: 1051650192}
         m_MethodName: EquipOrange
         m_Mode: 1
         m_Arguments:
@@ -2127,7 +2261,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1856958840}
+      - m_Target: {fileID: 1051650192}
         m_MethodName: PlayerRed
         m_Mode: 1
         m_Arguments:
@@ -2294,7 +2428,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1856958840}
+      - m_Target: {fileID: 1051650192}
         m_MethodName: PlayerOrange
         m_Mode: 1
         m_Arguments:
@@ -2465,7 +2599,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1856958840}
+      - m_Target: {fileID: 1051650192}
         m_MethodName: PlayerPink
         m_Mode: 1
         m_Arguments:
@@ -2591,6 +2725,105 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 832734696}
   m_CullTransparentMesh: 0
+--- !u!1001 &837936015
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: e15de5b24b9803c4d8b2d7d097cf090a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e15de5b24b9803c4d8b2d7d097cf090a,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 9.4877
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e15de5b24b9803c4d8b2d7d097cf090a,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 9.4877
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e15de5b24b9803c4d8b2d7d097cf090a,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 9.4877
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e15de5b24b9803c4d8b2d7d097cf090a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -53.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e15de5b24b9803c4d8b2d7d097cf090a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -33.1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e15de5b24b9803c4d8b2d7d097cf090a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 89.452614
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e15de5b24b9803c4d8b2d7d097cf090a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.0000000745058
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e15de5b24b9803c4d8b2d7d097cf090a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e15de5b24b9803c4d8b2d7d097cf090a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e15de5b24b9803c4d8b2d7d097cf090a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e15de5b24b9803c4d8b2d7d097cf090a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e15de5b24b9803c4d8b2d7d097cf090a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 179.99998
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e15de5b24b9803c4d8b2d7d097cf090a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e15de5b24b9803c4d8b2d7d097cf090a,
+        type: 3}
+      propertyPath: m_Name
+      value: Low Poly SuperHero
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e15de5b24b9803c4d8b2d7d097cf090a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e15de5b24b9803c4d8b2d7d097cf090a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Person
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: e15de5b24b9803c4d8b2d7d097cf090a,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 85870ae1b081138489a277bfabeb64cb, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e15de5b24b9803c4d8b2d7d097cf090a, type: 3}
 --- !u!1 &853946427
 GameObject:
   m_ObjectHideFlags: 0
@@ -2802,7 +3035,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1856958840}
+      - m_Target: {fileID: 1051650192}
         m_MethodName: PlayerBlack
         m_Mode: 1
         m_Arguments:
@@ -2825,7 +3058,7 @@ GameObject:
   - component: {fileID: 927171230}
   - component: {fileID: 927171229}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: PanelColors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3162,7 +3395,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1856958840}
+      - m_Target: {fileID: 1051650192}
         m_MethodName: EquipBlue
         m_Mode: 1
         m_Arguments:
@@ -3366,6 +3599,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1015784750}
   m_CullTransparentMesh: 0
+--- !u!1 &1051650189 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -2170242741256837465, guid: e15de5b24b9803c4d8b2d7d097cf090a,
+    type: 3}
+  m_PrefabInstance: {fileID: 837936015}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1051650192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051650189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 386184b8690db9045918a2e414941fb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberColors: 0
+  whiteTexture: {fileID: 2800000, guid: 48c50c6224666674cb2a44601baaffe9, type: 3}
+  blackTexture: {fileID: 2800000, guid: 2280e7c9d1452a44597d3c5c5358807a, type: 3}
+  blueTexture: {fileID: 2800000, guid: e00e5a28502036c47b50de0ea40cfa8f, type: 3}
+  grayTexture: {fileID: 2800000, guid: e109ab16407a47241891367687e77976, type: 3}
+  greenTexture: {fileID: 2800000, guid: a0edb7045bd9b9240aef76d28caa4bb6, type: 3}
+  orangeTexture: {fileID: 2800000, guid: b6a3332a80f416e47b309616b1678c60, type: 3}
+  pinkTexture: {fileID: 2800000, guid: a572603c4c6af75449357bbbdc8e5482, type: 3}
+  yellowTexture: {fileID: 2800000, guid: 957d1e9e26206764abc156013d7cc12f, type: 3}
+  purpleTexture: {fileID: 2800000, guid: c9b72d667b2e1f54398eb64f67788595, type: 3}
+  brownTexture: {fileID: 2800000, guid: ff4c0dbff4035394b8b03a55593988b9, type: 3}
+  redTexture: {fileID: 2800000, guid: ccb7535c164bbf44d9b506c570172698, type: 3}
+  lightGreenTexture: {fileID: 2800000, guid: 51de805a2dd929a499ac021209657111, type: 3}
+  birchTexture: {fileID: 2800000, guid: d5c63230058cac34ebabdf35c6f8e43e, type: 3}
+  equipWhite: {fileID: 582235670}
+  equipBlack: {fileID: 437506101}
+  equipBlue: {fileID: 984479465}
+  equipGray: {fileID: 1932676126}
+  equipGreen: {fileID: 2030047270}
+  equipOrange: {fileID: 732510404}
+  equipPink: {fileID: 2096529183}
+  equipYellow: {fileID: 616741464}
+  equipPurple: {fileID: 1684791810}
+  equipBrown: {fileID: 1982086005}
+  equipRed: {fileID: 1286941403}
+  equipLightGreen: {fileID: 1999266723}
+  equipBirch: {fileID: 1885369319}
 --- !u!1 &1085753577
 GameObject:
   m_ObjectHideFlags: 0
@@ -3678,6 +3956,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1216810092}
   m_CullTransparentMesh: 0
+--- !u!1 &1231373105
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1231373107}
+  m_Layer: 0
+  m_Name: PlayerManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1231373107
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231373105}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -51.71962, y: 11.319052, z: 56.822422}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1286941403
 GameObject:
   m_ObjectHideFlags: 0
@@ -3760,7 +4068,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1856958840}
+      - m_Target: {fileID: 1051650192}
         m_MethodName: EquipRed
         m_Mode: 1
         m_Arguments:
@@ -3890,7 +4198,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1856958840}
+      - m_Target: {fileID: 1051650192}
         m_MethodName: PlayerBirch
         m_Mode: 1
         m_Arguments:
@@ -4020,7 +4328,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1856958840}
+      - m_Target: {fileID: 1051650192}
         m_MethodName: PlayerBrown
         m_Mode: 1
         m_Arguments:
@@ -4594,7 +4902,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1856958840}
+      - m_Target: {fileID: 1051650192}
         m_MethodName: EquipPurple
         m_Mode: 1
         m_Arguments:
@@ -4802,7 +5110,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1856958840}
+      - m_Target: {fileID: 1051650192}
         m_MethodName: PlayerYellow
         m_Mode: 1
         m_Arguments:
@@ -4928,135 +5236,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1833433283}
   m_CullTransparentMesh: 0
---- !u!1001 &1856958838
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4139760606627170415, guid: 8f644ee86692a094692afb12f5c0c303,
-        type: 3}
-      propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 4139760606627170415, guid: 8f644ee86692a094692afb12f5c0c303,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4458150415357657791, guid: 8f644ee86692a094692afb12f5c0c303,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 478722f5d36329d4a893dd9979b84e2c, type: 2}
-    - target: {fileID: 5482026381242701589, guid: 8f644ee86692a094692afb12f5c0c303,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5482026381242701589, guid: 8f644ee86692a094692afb12f5c0c303,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 18.775
-      objectReference: {fileID: 0}
-    - target: {fileID: 5482026381242701589, guid: 8f644ee86692a094692afb12f5c0c303,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 18.775
-      objectReference: {fileID: 0}
-    - target: {fileID: 5482026381242701589, guid: 8f644ee86692a094692afb12f5c0c303,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 18.775
-      objectReference: {fileID: 0}
-    - target: {fileID: 5482026381242701589, guid: 8f644ee86692a094692afb12f5c0c303,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -50.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5482026381242701589, guid: 8f644ee86692a094692afb12f5c0c303,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -13.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5482026381242701589, guid: 8f644ee86692a094692afb12f5c0c303,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 91.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5482026381242701589, guid: 8f644ee86692a094692afb12f5c0c303,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5482026381242701589, guid: 8f644ee86692a094692afb12f5c0c303,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5482026381242701589, guid: 8f644ee86692a094692afb12f5c0c303,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5482026381242701589, guid: 8f644ee86692a094692afb12f5c0c303,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5482026381242701589, guid: 8f644ee86692a094692afb12f5c0c303,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5482026381242701589, guid: 8f644ee86692a094692afb12f5c0c303,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5482026381242701589, guid: 8f644ee86692a094692afb12f5c0c303,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3904930740227718455, guid: 8f644ee86692a094692afb12f5c0c303, type: 3}
-    - {fileID: 7102404872404650958, guid: 8f644ee86692a094692afb12f5c0c303, type: 3}
-    - {fileID: 4139760606627170414, guid: 8f644ee86692a094692afb12f5c0c303, type: 3}
-  m_SourcePrefab: {fileID: 100100000, guid: 8f644ee86692a094692afb12f5c0c303, type: 3}
---- !u!1 &1856958839 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4139760606627170415, guid: 8f644ee86692a094692afb12f5c0c303,
-    type: 3}
-  m_PrefabInstance: {fileID: 1856958838}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1856958840
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1856958839}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50e9fb9a01b6a0249853d5165e4288b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!136 &1856958844
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1856958839}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.49999997
-  m_Height: 1.9999999
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1885369319
 GameObject:
   m_ObjectHideFlags: 0
@@ -5139,7 +5318,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1856958840}
+      - m_Target: {fileID: 1051650192}
         m_MethodName: EquipBirch
         m_Mode: 1
         m_Arguments:
@@ -5269,7 +5448,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1856958840}
+      - m_Target: {fileID: 1051650192}
         m_MethodName: EquipGray
         m_Mode: 1
         m_Arguments:
@@ -5399,7 +5578,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1856958840}
+      - m_Target: {fileID: 1051650192}
         m_MethodName: EquipBrown
         m_Mode: 1
         m_Arguments:
@@ -5607,7 +5786,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1856958840}
+      - m_Target: {fileID: 1051650192}
         m_MethodName: EquipLightGreen
         m_Mode: 1
         m_Arguments:
@@ -5737,7 +5916,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1856958840}
+      - m_Target: {fileID: 1051650192}
         m_MethodName: EquipGreen
         m_Mode: 1
         m_Arguments:
@@ -6023,7 +6202,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1856958840}
+      - m_Target: {fileID: 1051650192}
         m_MethodName: EquipPink
         m_Mode: 1
         m_Arguments:
@@ -6190,7 +6369,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1856958840}
+      - m_Target: {fileID: 1051650192}
         m_MethodName: PlayerGray
         m_Mode: 1
         m_Arguments:
@@ -6265,7 +6444,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2125850584
 GameObject:
@@ -6360,7 +6539,7 @@ PrefabInstance:
     - target: {fileID: 7769534688021523823, guid: 9e31c322687580d4ebf6f2ed0bfdee40,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7769534688021523823, guid: 9e31c322687580d4ebf6f2ed0bfdee40,
         type: 3}

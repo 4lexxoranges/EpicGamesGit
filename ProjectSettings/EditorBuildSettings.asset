@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Lobby.unity
     guid: d709564c2d890304b94386015460ca90
   - enabled: 1
-    path: Assets/Scenes/Floor is lava.unity
+    path: Assets/Scenes/Jungle.unity
     guid: bacc46ad20ca4b54c8ace75eb1d0387c
   m_configObjects: {}

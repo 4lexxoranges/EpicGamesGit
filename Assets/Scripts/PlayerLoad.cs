@@ -2,8 +2,8 @@
 
 public class PlayerLoad : MonoBehaviour
 {
-    MeshRenderer meshRenderer;
-
+    SkinnedMeshRenderer skinnedMesh;
+    public int numberColors;
     public Texture whiteTexture;
     public Texture blackTexture;
     public Texture blueTexture;
@@ -18,11 +18,10 @@ public class PlayerLoad : MonoBehaviour
     public Texture lightGreenTexture;
     public Texture birchTexture;
 
-    public int numberColors;
     // Start is called before the first frame update
     void Start()
     {
-        meshRenderer = GetComponent<MeshRenderer>();
+        skinnedMesh = GetComponent<SkinnedMeshRenderer>();
         numberColors = PlayerPrefs.GetInt("Color");
     }
 
@@ -31,55 +30,55 @@ public class PlayerLoad : MonoBehaviour
     {
         if (numberColors == 1)
         {
-            meshRenderer.material.SetTexture("_MainTex", whiteTexture);
+            skinnedMesh.material.SetTexture("_MainTex", whiteTexture);
         }
         if (numberColors == 2)
         {
-            meshRenderer.material.SetTexture("_MainTex", blackTexture);
+            skinnedMesh.material.SetTexture("_MainTex", blackTexture);
         }
         if (numberColors == 3)
         {
-            meshRenderer.material.SetTexture("_MainTex", blueTexture);
+            skinnedMesh.material.SetTexture("_MainTex", blueTexture);
         }
         if (numberColors == 4)
         {
-            meshRenderer.material.SetTexture("_MainTex", grayTexture);
+            skinnedMesh.material.SetTexture("_MainTex", grayTexture);
         }
         if (numberColors == 5)
         {
-            meshRenderer.material.SetTexture("_MainTex", greenTexture);
+            skinnedMesh.material.SetTexture("_MainTex", greenTexture);
         }
         if (numberColors == 6)
         {
-            meshRenderer.material.SetTexture("_MainTex", orangeTexture);
+            skinnedMesh.material.SetTexture("_MainTex", orangeTexture);
         }
         if (numberColors == 7)
         {
-            meshRenderer.material.SetTexture("_MainTex", pinkTexture);
+            skinnedMesh.material.SetTexture("_MainTex", pinkTexture);
         }
         if (numberColors == 8)
         {
-            meshRenderer.material.SetTexture("_MainTex", yellowTexture);
+            skinnedMesh.material.SetTexture("_MainTex", yellowTexture);
         }
         if (numberColors == 9)
         {
-            meshRenderer.material.SetTexture("_MainTex", purpleTexture);
+            skinnedMesh.material.SetTexture("_MainTex", purpleTexture);
         }
         if (numberColors == 10)
         {
-            meshRenderer.material.SetTexture("_MainTex", brownTexture);
+            skinnedMesh.material.SetTexture("_MainTex", brownTexture);
         }
         if (numberColors == 11)
         {
-            meshRenderer.material.SetTexture("_MainTex", redTexture);
+            skinnedMesh.material.SetTexture("_MainTex", redTexture);
         }
         if (numberColors == 12)
         {
-            meshRenderer.material.SetTexture("_MainTex", lightGreenTexture);
+            skinnedMesh.material.SetTexture("_MainTex", lightGreenTexture);
         }
         if (numberColors == 13)
         {
-            meshRenderer.material.SetTexture("_MainTex", birchTexture);
+            skinnedMesh.material.SetTexture("_MainTex", birchTexture);
         }
     }
 }

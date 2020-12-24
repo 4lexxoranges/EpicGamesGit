@@ -11,7 +11,8 @@ TagManager:
   - Person
   - DeathGround
   - Coin
-  - FloorIsLava
+  - Finis
+  - Jungle
   layers:
   - Default
   - TransparentFX

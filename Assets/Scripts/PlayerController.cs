@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
@@ -8,8 +10,8 @@ public class PlayerController : MonoBehaviour
     public float healthSize = 100;
     private float gravityForce;
     private Vector3 moveVector;
+    public float currentHealth;
     public GameObject healthBar;
-    public GameObject deathMenu;
 
     [SerializeField] public GameObject coin;
     [SerializeField] public Text coins;
@@ -17,8 +19,8 @@ public class PlayerController : MonoBehaviour
 
     private CharacterController characterController;
     private MobileController mobileController;
+    private Timer timer;
     private Animator animator;
-    public float currentHealth;
 
 
     // Start is called before the first frame update
@@ -45,13 +47,10 @@ public class PlayerController : MonoBehaviour
     {
         CharacterMove();
         GamingGravity();
-        if (moveVector.x != 0 || moveVector.z != 0)
+
+        if (timer.timerStart <= 0)
         {
-            animator.SetBool("Move", true);
-        }
-        else
-        {
-            animator.SetBool("Move", false);
+            Application.LoadLevel("Lobby");
         }
 
         if (currentHealth <= 0)
@@ -59,15 +58,44 @@ public class PlayerController : MonoBehaviour
             Invoke("Lose", 0.5f);
         }
 
+        if (moveVector.x == 0 || moveVector.y == 0)
+        {
+            animator.SetBool("Move", false);
+            animator.SetBool("Walk", false);
+        }
+
+        if (moveVector.x >= 0.1 || moveVector.z >= 0.1)
+        {
+            animator.SetBool("Move", false);
+            animator.SetBool("Walk", true);
+        }
+
+        if (moveVector.x >= 3 || moveVector.z >= 3)
+        {
+            animator.SetBool("Move", true);
+            animator.SetBool("Walk", false);
+        }
+
+        if (characterController.isGrounded)
+        {
+            animator.ResetTrigger("Jump");
+            animator.SetBool("Failing", false);
+        }
+        else
+        {
+            if (gravityForce < -3f)
+            {
+                animator.SetBool("Failing", true);
+            }
+        }
+
+        
 
     }
 
 
     void CharacterMove()
     {
-        animator.ResetTrigger("Jump");
-        animator.SetBool("Failing", false);
-
         moveVector = Vector3.zero;
         moveVector.x = mobileController.Horizontal() * speedMove;
         moveVector.z = mobileController.Vertical() * speedMove;
@@ -80,8 +108,6 @@ public class PlayerController : MonoBehaviour
 
         moveVector.y = gravityForce;
         characterController.Move(moveVector * Time.deltaTime);
-
-
     }
 
     public void GamingGravity()
@@ -93,11 +119,6 @@ public class PlayerController : MonoBehaviour
         else
         {
             gravityForce = -1f;
-        }
-
-        if (gravityForce <= -3f)
-        {
-            animator.SetBool("Failing", true);
         }
     }
 
@@ -123,27 +144,26 @@ public class PlayerController : MonoBehaviour
                 currentHealth -= 100;
                 break;
             case "Coin":
-                coinsCount += 100;
+                coinsCount += 50;
                 coins.text = "Coins:" + coinsCount.ToString();
                 Destroy(coin);
 
                 SavePlayer();
                 break;
-            case "FloorIsLava":
-                Application.LoadLevel("Floor Is Lava");
+            case "Finis":
+                coinsCount += 200;
+                coins.text = "Coins:" + coinsCount.ToString();
+
+                SavePlayer();
+                Application.LoadLevel("Lobby");
+                break;
+            case "Jungle":
+                Application.LoadLevel("Jungle");
                 break;
         }
     }
 
-    public void OnCollisionEnter(Collision collision)
-    {
-        switch (collision.gameObject.tag)
-        {
-
-        }
-
-    }
-    void SavePlayer()
+    public void SavePlayer()
     {
         PlayerPrefs.SetInt("coinsFinal", coinsCount);
     }
