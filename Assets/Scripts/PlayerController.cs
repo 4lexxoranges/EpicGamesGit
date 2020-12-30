@@ -52,24 +52,12 @@ public class PlayerController : MonoBehaviour
         {
             Lose();
         }
-
+        
         if (currentHealth <= 0)
         {
             Lose();
         }
         
-        if (moveVector.x == 0 || moveVector.z == 0)
-        {
-            animator.SetBool("Move", false);
-            animator.SetBool("Walk", false);
-        }
-
-        if (moveVector.x >= 0 || moveVector.z >=  0)
-        {
-            animator.SetBool("Walk", true);
-            animator.SetBool("Move", false);
-        }
-
         if (characterController.isGrounded)
         {
             animator.ResetTrigger("Jump");
@@ -89,7 +77,14 @@ public class PlayerController : MonoBehaviour
 
     void CharacterMove()
     {
-
+        if (moveVector.x != 0 || moveVector.z != 0)
+        {
+            animator.SetBool("Move", true);
+        }
+        else
+        {
+            animator.SetBool("Move", false);
+        }
         moveVector = Vector3.zero;
         moveVector.x = mobileController.Horizontal() * speedMove;
         moveVector.z = mobileController.Vertical() * speedMove;
