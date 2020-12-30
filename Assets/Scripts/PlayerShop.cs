@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerShop : MonoBehaviour
 {
-    SkinnedMeshRenderer skinnedMesh;
+    SkinnedMeshRenderer skinnedMeshRenderer;
     public int numberColors;
     public Texture whiteTexture;
     public Texture blackTexture;
@@ -38,7 +38,7 @@ public class PlayerShop : MonoBehaviour
     void Start()
     {
         numberColors = PlayerPrefs.GetInt("Color");
-        skinnedMesh = GetComponent<SkinnedMeshRenderer>();
+        skinnedMeshRenderer = GetComponent<SkinnedMeshRenderer>();
     }
 
     // Update is called once per frame
@@ -48,7 +48,7 @@ public class PlayerShop : MonoBehaviour
     }
     public void PlayerWhite()
     {
-        skinnedMesh.material.SetTexture("_MainTex", whiteTexture);
+        skinnedMeshRenderer.material.SetTexture("_MainTex", whiteTexture);
         equipWhite.SetActive(true);
         equipBlack.SetActive(false);
         equipBlue.SetActive(false);
@@ -65,7 +65,7 @@ public class PlayerShop : MonoBehaviour
     }
     public void PlayerBlack()
     {
-        skinnedMesh.material.SetTexture("_MainTex", blackTexture);
+        skinnedMeshRenderer.material.SetTexture("_MainTex", blackTexture);
         equipWhite.SetActive(false);
         equipBlack.SetActive(true);
         equipBlue.SetActive(false);
@@ -82,7 +82,7 @@ public class PlayerShop : MonoBehaviour
     }
     public void PlayerBlue()
     {
-        skinnedMesh.material.SetTexture("_MainTex", blueTexture);
+        skinnedMeshRenderer.material.SetTexture("_MainTex", blueTexture);
         equipWhite.SetActive(false);
         equipBlack.SetActive(false);
         equipBlue.SetActive(true);
@@ -99,7 +99,7 @@ public class PlayerShop : MonoBehaviour
     }
     public void PlayerGray()
     {
-        skinnedMesh.material.SetTexture("_MainTex", grayTexture);
+        skinnedMeshRenderer.material.SetTexture("_MainTex", grayTexture);
         equipWhite.SetActive(false);
         equipBlack.SetActive(false);
         equipBlue.SetActive(false);
@@ -116,7 +116,7 @@ public class PlayerShop : MonoBehaviour
     }
     public void PlayerGreen()
     {
-        skinnedMesh.material.SetTexture("_MainTex", greenTexture);
+        skinnedMeshRenderer.material.SetTexture("_MainTex", greenTexture);
         equipWhite.SetActive(false);
         equipBlack.SetActive(false);
         equipBlue.SetActive(false);
@@ -133,7 +133,7 @@ public class PlayerShop : MonoBehaviour
     }
     public void PlayerOrange()
     {
-        skinnedMesh.material.SetTexture("_MainTex", orangeTexture);
+        skinnedMeshRenderer.material.SetTexture("_MainTex", orangeTexture);
         equipWhite.SetActive(false);
         equipBlack.SetActive(false);
         equipBlue.SetActive(false);
@@ -150,7 +150,7 @@ public class PlayerShop : MonoBehaviour
     }
     public void PlayerPink()
     {
-        skinnedMesh.material.SetTexture("_MainTex", pinkTexture);
+        skinnedMeshRenderer.material.SetTexture("_MainTex", pinkTexture);
         equipWhite.SetActive(false);
         equipBlack.SetActive(false);
         equipBlue.SetActive(false);
@@ -167,7 +167,7 @@ public class PlayerShop : MonoBehaviour
     }
     public void PlayerYellow()
     {
-        skinnedMesh.material.SetTexture("_MainTex", yellowTexture);
+        skinnedMeshRenderer.material.SetTexture("_MainTex", yellowTexture);
         equipWhite.SetActive(false);
         equipBlack.SetActive(false);
         equipBlue.SetActive(false);
@@ -184,7 +184,7 @@ public class PlayerShop : MonoBehaviour
     }
     public void PlayerPurple()
     {
-        skinnedMesh.material.SetTexture("_MainTex", purpleTexture);
+        skinnedMeshRenderer.material.SetTexture("_MainTex", purpleTexture);
         equipWhite.SetActive(false);
         equipBlack.SetActive(false);
         equipBlue.SetActive(false);
@@ -201,7 +201,7 @@ public class PlayerShop : MonoBehaviour
     }
     public void PlayerBrown()
     {
-        skinnedMesh.material.SetTexture("_MainTex", brownTexture);
+        skinnedMeshRenderer.material.SetTexture("_MainTex", brownTexture);
         equipWhite.SetActive(false);
         equipBlack.SetActive(false);
         equipBlue.SetActive(false);
@@ -218,7 +218,7 @@ public class PlayerShop : MonoBehaviour
     }
     public void PlayerRed()
     {
-        skinnedMesh.material.SetTexture("_MainTex", redTexture);
+        skinnedMeshRenderer.material.SetTexture("_MainTex", redTexture);
         equipWhite.SetActive(false);
         equipBlack.SetActive(false);
         equipBlue.SetActive(false);
@@ -235,7 +235,7 @@ public class PlayerShop : MonoBehaviour
     }
     public void PlayerLightGreen()
     {
-        skinnedMesh.material.SetTexture("_MainTex", lightGreenTexture);
+        skinnedMeshRenderer.material.SetTexture("_MainTex", lightGreenTexture);
         equipWhite.SetActive(false);
         equipBlack.SetActive(false);
         equipBlue.SetActive(false);
@@ -252,7 +252,7 @@ public class PlayerShop : MonoBehaviour
     }
     public void PlayerBirch()
     {
-        skinnedMesh.material.SetTexture("_MainTex", birchTexture);
+        skinnedMeshRenderer.material.SetTexture("_MainTex", birchTexture);
         equipWhite.SetActive(false);
         equipBlack.SetActive(false);
         equipBlue.SetActive(false);

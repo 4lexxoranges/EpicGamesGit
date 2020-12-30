@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     private MobileController mobileController;
     private Timer timer;
     private Animator animator;
-
+    public bool isGrounded;
 
     // Start is called before the first frame update
     void Start()
@@ -50,52 +50,46 @@ public class PlayerController : MonoBehaviour
 
         if (timer.timerStart <= 0)
         {
-            Application.LoadLevel("Lobby");
+            Lose();
         }
 
         if (currentHealth <= 0)
         {
-            Invoke("Lose", 0.5f);
+            Lose();
         }
-
-        if (moveVector.x == 0 || moveVector.y == 0)
+        
+        if (moveVector.x == 0 || moveVector.z == 0)
         {
             animator.SetBool("Move", false);
             animator.SetBool("Walk", false);
         }
 
-        if (moveVector.x >= 0.1 || moveVector.z >= 0.1)
+        if (moveVector.x >= 0 || moveVector.z >=  0)
         {
-            animator.SetBool("Move", false);
             animator.SetBool("Walk", true);
-        }
-
-        if (moveVector.x >= 3 || moveVector.z >= 3)
-        {
-            animator.SetBool("Move", true);
-            animator.SetBool("Walk", false);
+            animator.SetBool("Move", false);
         }
 
         if (characterController.isGrounded)
         {
             animator.ResetTrigger("Jump");
             animator.SetBool("Failing", false);
+            isGrounded = true;
         }
+
         else
         {
+            isGrounded = false;
             if (gravityForce < -3f)
             {
                 animator.SetBool("Failing", true);
             }
         }
-
-        
-
     }
-
 
     void CharacterMove()
     {
+
         moveVector = Vector3.zero;
         moveVector.x = mobileController.Horizontal() * speedMove;
         moveVector.z = mobileController.Vertical() * speedMove;
@@ -150,30 +144,29 @@ public class PlayerController : MonoBehaviour
 
                 SavePlayer();
                 break;
-            case "Finis":
-                coinsCount += 200;
-                coins.text = "Coins:" + coinsCount.ToString();
-
-                SavePlayer();
-                Application.LoadLevel("Lobby");
+            case "Finish":
+                Finish();
+                break;
+            case "FloorIsLava":
+                SceneManager.LoadScene("Floor is lava");
                 break;
             case "Jungle":
-                Application.LoadLevel("Jungle");
+                SceneManager.LoadScene("Jungle");
                 break;
         }
+    }
+
+    public void Finish()
+    {
+        SceneManager.LoadScene("Lobby");
+        coinsCount += 200;
+        coins.text = "Coins:" + coinsCount.ToString();
+
+        SavePlayer();
     }
 
     public void SavePlayer()
     {
         PlayerPrefs.SetInt("coinsFinal", coinsCount);
     }
-
-    //void OnCollisionEnter(Collision collision)
-    //{
-    //    switch (collision.gameObject.tag)
-    //    {
-    //        //case "Enemy":
-    //        //    break;
-    //    }
-    //}
 }
