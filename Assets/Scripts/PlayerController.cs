@@ -57,22 +57,6 @@ public class PlayerController : MonoBehaviour
         {
             Lose();
         }
-        
-        if (characterController.isGrounded)
-        {
-            animator.ResetTrigger("Jump");
-            animator.SetBool("Failing", false);
-            isGrounded = true;
-        }
-
-        else
-        {
-            isGrounded = false;
-            if (gravityForce < -3f)
-            {
-                animator.SetBool("Failing", true);
-            }
-        }
     }
 
     void CharacterMove()
@@ -103,10 +87,16 @@ public class PlayerController : MonoBehaviour
     {
         if (!characterController.isGrounded)
         {
+            if (gravityForce < -3f)
+            {
+                animator.SetBool("Failing", true);
+            }
             gravityForce -= 20f * Time.deltaTime;
         }
         else
         {
+            animator.ResetTrigger("Jump");
+            animator.SetBool("Failing", false);
             gravityForce = -1f;
         }
     }
