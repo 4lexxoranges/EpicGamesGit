@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class SceneControl : MonoBehaviour
 {
+    public GameObject buttonStart;
     public GameObject pausePanel;
     public GameObject image;
     public GameObject image2;
@@ -17,13 +20,20 @@ public class SceneControl : MonoBehaviour
         Time.timeScale = 1;
     }
     // Update is called once per frame
+
     void Update()
     {
 
     }
+    public void GoToMainMenu()
+    {
+        SceneTransition.SwitchToScene("MainMenu");
+        buttonStart.SetActive(false);
+    }
 
     public void SceneManager(string name)
     {
+
         Application.LoadLevel(name);
     }
 

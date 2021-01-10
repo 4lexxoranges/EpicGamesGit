@@ -32,6 +32,8 @@ public class MainMenuControl : MonoBehaviour
         seasons.SetActive(false);
         shop.SetActive(false);
         settings.SetActive(false);
+        player.transform.Translate(-90, 0, 0 * Time.deltaTime);
+        platform.transform.Translate(90, 0, 0 * Time.deltaTime);
     }
 
     public void Customizations()
@@ -41,7 +43,8 @@ public class MainMenuControl : MonoBehaviour
         seasons.SetActive(false);
         shop.SetActive(false);
         settings.SetActive(false);
-        player.transform.Translate(-90, 0, 0 * Time.deltaTime);
+        player.transform.Translate(90, 0, 0 * Time.deltaTime);
+        platform.transform.Translate(-90, 0, 0 * Time.deltaTime);
     }
 
     public void Seasons()
